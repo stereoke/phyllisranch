@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<title>Phyllis Ranch</title>
+<meta name="description" content="Long sunsets. Speaking grass. Stars forever.">
+<link rel="canonical" href="https://phyllisranch.com/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#fdc8c8">
+
+<!-- Location -->
+<meta name="geo.region" content="US-CA">
+<meta name="geo.placename" content="San Miguel, California">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Phyllis Ranch">
+<meta property="og:title" content="Phyllis Ranch">
+<meta property="og:description" content="Long sunsets. Speaking grass. Stars forever.">
+<meta property="og:url" content="https://phyllisranch.com/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://raw.githubusercontent.com/stereoke/images/main/phyllis-ranch-san-miguel-california.jpg">
+<meta property="og:image:secure_url" content="https://raw.githubusercontent.com/stereoke/images/main/phyllis-ranch-san-miguel-california.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1254">
+<meta property="og:image:height" content="1254">
+<meta property="og:image:alt" content="Phyllis Ranch — the Mona Lisa wearing a white cowboy hat on a pink field, with the Phyllis Ranch name in green rope lettering.">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Phyllis Ranch">
+<meta name="twitter:description" content="Long sunsets. Speaking grass. Stars forever.">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/stereoke/images/main/phyllis-ranch-san-miguel-california.jpg">
+<meta name="twitter:image:alt" content="Phyllis Ranch — the Mona Lisa wearing a white cowboy hat on a pink field, with the Phyllis Ranch name in green rope lettering.">
+
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Phyllis Ranch",
+  "url": "https://phyllisranch.com/",
+  "logo": "https://raw.githubusercontent.com/stereoke/images/main/phyllis-ranch-san-miguel-california.jpg",
+  "image": "https://raw.githubusercontent.com/stereoke/images/main/phyllis-ranch-san-miguel-california.jpg",
+  "slogan": "Long sunsets. Speaking grass. Stars forever.",
+  "description": "Long sunsets. Speaking grass. Stars forever.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "San Miguel",
+    "addressRegion": "CA",
+    "addressCountry": "US"
+  }
+}
+</script>
+
+<style>
+  :root{
+    --pink:#fdc8c8;
+    --rope:#35803d;
+    --rope-deep:#245c2a;
+  }
+
+  *{box-sizing:border-box;}
+
+  html,body{height:100%;}
+
+  body{
+    margin:0;
+    background:var(--pink);
+    color:var(--rope-deep);
+    font-family:"Archivo","Helvetica Neue",Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    min-height:100svh;
+    padding:clamp(16px,4vw,48px);
+    padding-bottom:max(clamp(16px,4vw,48px),env(safe-area-inset-bottom));
+    text-align:center;
+  }
+
+  main{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    width:100%;
+    max-width:640px;
+    animation:rise 1s cubic-bezier(.22,.75,.3,1) both;
+  }
+
+  /* The artwork's own field is this exact pink, so it dissolves into the page —
+     no card, no border, no shadow. The page IS the poster. */
+  .art{
+    display:block;
+    width:100%;
+    height:auto;
+    max-height:86svh;
+    object-fit:contain;
+    margin:0;
+  }
+
+  /* Kept for screen readers and crawlers; nothing renders. */
+  .sr-only{
+    position:absolute;
+    width:1px;height:1px;
+    padding:0;margin:-1px;
+    overflow:hidden;
+    clip:rect(0,0,0,0);
+    white-space:nowrap;
+    border:0;
+  }
+
+  @keyframes rise{
+    from{opacity:0;transform:translateY(14px);}
+    to{opacity:1;transform:none;}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    main{animation:none;}
+  }
+
+  @media (max-height:560px){
+    .art{max-height:76svh;}
+  }
+</style>
+</head>
+<body>
+  <main>
+    <img
+      class="art"
+      src="https://raw.githubusercontent.com/stereoke/images/main/phyllis-ranch-san-miguel-california.jpg"
+      width="1254"
+      height="1254"
+      fetchpriority="high"
+      decoding="async"
+      alt="Phyllis Ranch — the Mona Lisa wearing a white cowboy hat on a pink field, with the Phyllis Ranch name in green rope lettering.">
+<h1 class="sr-only">Phyllis Ranch</h1>
+  </main>
+</body>
+</html>
