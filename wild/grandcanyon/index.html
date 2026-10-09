@@ -7,6 +7,10 @@
 <meta name="description" content="Grand Canyon 2026. Danielle Mariott.">
 <meta property="og:title" content="Grand Canyon 2026 | Phyllis Ranch">
 <meta property="og:image" content="https://phyllisranch.com/wild/grandcanyon/img/gc-01-1440.jpg">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="theme-color" content="#ffffff">
 <style>
   *,*::before,*::after{box-sizing:border-box}
@@ -40,6 +44,27 @@
     .stepper{display:none}
   }
   @media (prefers-reduced-motion:reduce){.stepper button span{transition:none}}
+
+  /* Video hotspots + lightbox */
+  .slide{position:relative}
+  .play{position:absolute;top:0;bottom:0;border:0;padding:0;margin:0;background:none;cursor:pointer;display:grid;place-items:center;-webkit-tap-highlight-color:transparent}
+  .play:focus-visible{outline:3px solid #fff;outline-offset:-6px}
+  .play span{display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.92);box-shadow:0 2px 14px rgba(0,0,0,.35);transition:opacity .2s ease,transform .2s ease}
+  .play span::before{content:"";margin-left:4px;border-style:solid;border-width:9px 0 9px 15px;border-color:transparent transparent transparent #222}
+  @media (min-width:800px){.play span{width:76px;height:76px}.play span::before{margin-left:6px;border-width:14px 0 14px 23px}}
+  @media (min-width:800px) and (hover:hover){
+    .play span{opacity:0;transform:scale(.85)}
+    .play.main span{position:relative;left:var(--dx,0)}
+    .play:not(.main) span{display:none}
+    .play.on span,.play.main:focus-visible span{opacity:1;transform:none}
+  }
+  #lb{border:0;padding:0;background:none;max-width:none;max-height:none;overflow:visible}
+  #lb::backdrop{background:rgba(0,0,0,.88)}
+  #lb .frame{width:min(92vw,calc(80dvh*var(--r,1.7778)));aspect-ratio:var(--r,1.7778);background:#000}
+  #lb iframe{display:block;width:100%;height:100%;border:0}
+  #lb .x{position:absolute;top:-46px;right:-4px;width:44px;height:44px;border:0;background:none;color:#fff;font:300 34px/1 system-ui,sans-serif;cursor:pointer}
+  #lb .x:focus-visible{outline:2px solid #fff}
+  @media (prefers-reduced-motion:reduce){.play span{transition:none}}
 </style>
 </head>
 <body>
@@ -47,17 +72,17 @@
 <p class="sr" id="status" aria-live="polite"></p>
 <ul class="strip" id="strip" tabindex="0" aria-label="Grand Canyon 2026 photo strip">
     <li class="slide" id="s1"><img src="/wild/grandcanyon/img/gc-01-1440.jpg" srcset="/wild/grandcanyon/img/gc-01-800.jpg 800w, /wild/grandcanyon/img/gc-01-1440.jpg 1440w" sizes="(min-width: 800px) 80vh, 100vw" width="1440" height="1800" alt="Grand Canyon 2026. Danielle Mariott" fetchpriority="high" decoding="async"></li>
-    <li class="slide" id="s2"><img src="/wild/grandcanyon/img/gc-02-1440.jpg" srcset="/wild/grandcanyon/img/gc-02-800.jpg 800w, /wild/grandcanyon/img/gc-02-1440.jpg 1440w" sizes="(min-width: 800px) 80vh, 100vw" width="1440" height="1800" alt="Grand Canyon 2026. Danielle Mariott"  decoding="async"></li>
-    <li class="slide" id="s3"><img src="/wild/grandcanyon/img/gc-03-1440.jpg" srcset="/wild/grandcanyon/img/gc-03-800.jpg 800w, /wild/grandcanyon/img/gc-03-1440.jpg 1440w" sizes="(min-width: 800px) 80vh, 100vw" width="1440" height="1800" alt="Grand Canyon 2026. Danielle Mariott"  decoding="async"></li>
-    <li class="slide" id="s4"><img src="/wild/grandcanyon/img/gc-04-1440.jpg" srcset="/wild/grandcanyon/img/gc-04-800.jpg 800w, /wild/grandcanyon/img/gc-04-1440.jpg 1440w" sizes="(min-width: 800px) 80vh, 100vw" width="1440" height="1800" alt="Grand Canyon 2026. Danielle Mariott" loading="lazy" decoding="async"></li>
+    <li class="slide" id="s2"><img src="/wild/grandcanyon/img/gc-02-1440.jpg" srcset="/wild/grandcanyon/img/gc-02-800.jpg 800w, /wild/grandcanyon/img/gc-02-1440.jpg 1440w" sizes="(min-width: 800px) 80vh, 100vw" width="1440" height="1800" alt="Grand Canyon 2026. Danielle Mariott"  decoding="async"><button class="play main" type="button" data-video="FYdUG0EVfbM" data-ratio="0.5625" style="left:43.5%;right:0;top:4.5%;bottom:4.7%" aria-label="Play video: Below Bass, Grand Canyon"><span></span></button></li>
+    <li class="slide" id="s3"><img src="/wild/grandcanyon/img/gc-03-1440.jpg" srcset="/wild/grandcanyon/img/gc-03-800.jpg 800w, /wild/grandcanyon/img/gc-03-1440.jpg 1440w" sizes="(min-width: 800px) 80vh, 100vw" width="1440" height="1800" alt="Grand Canyon 2026. Danielle Mariott"  decoding="async"><button class="play" type="button" data-video="x0Z14hfs2q4" data-ratio="0.5625" style="left:55.4%;right:0" aria-label="Play video: NPS helicopter search and rescue, Grand Canyon"><span></span></button></li>
+    <li class="slide" id="s4"><img src="/wild/grandcanyon/img/gc-04-1440.jpg" srcset="/wild/grandcanyon/img/gc-04-800.jpg 800w, /wild/grandcanyon/img/gc-04-1440.jpg 1440w" sizes="(min-width: 800px) 80vh, 100vw" width="1440" height="1800" alt="Grand Canyon 2026. Danielle Mariott" loading="lazy" decoding="async"><button class="play main" type="button" data-video="x0Z14hfs2q4" data-ratio="0.5625" style="left:0;right:57.7%;--dx:-52.7%" aria-label="Play video: NPS helicopter search and rescue, Grand Canyon"><span></span></button></li>
     <li class="slide" id="s5"><img src="/wild/grandcanyon/img/gc-05-1440.jpg" srcset="/wild/grandcanyon/img/gc-05-800.jpg 800w, /wild/grandcanyon/img/gc-05-1440.jpg 1440w" sizes="(min-width: 800px) 80vh, 100vw" width="1440" height="1800" alt="Grand Canyon 2026. Danielle Mariott" loading="lazy" decoding="async"></li>
     <li class="slide" id="s6"><img src="/wild/grandcanyon/img/gc-06-1440.jpg" srcset="/wild/grandcanyon/img/gc-06-800.jpg 800w, /wild/grandcanyon/img/gc-06-1440.jpg 1440w" sizes="(min-width: 800px) 80vh, 100vw" width="1440" height="1800" alt="Grand Canyon 2026. Danielle Mariott" loading="lazy" decoding="async"></li>
     <li class="slide" id="s7"><img src="/wild/grandcanyon/img/gc-07-1440.jpg" srcset="/wild/grandcanyon/img/gc-07-800.jpg 800w, /wild/grandcanyon/img/gc-07-1440.jpg 1440w" sizes="(min-width: 800px) 80vh, 100vw" width="1440" height="1800" alt="Grand Canyon 2026. Danielle Mariott" loading="lazy" decoding="async"></li>
     <li class="slide" id="s8"><img src="/wild/grandcanyon/img/gc-08-1440.jpg" srcset="/wild/grandcanyon/img/gc-08-800.jpg 800w, /wild/grandcanyon/img/gc-08-1440.jpg 1440w" sizes="(min-width: 800px) 80vh, 100vw" width="1440" height="1800" alt="Grand Canyon 2026. Danielle Mariott" loading="lazy" decoding="async"></li>
     <li class="slide" id="s9"><img src="/wild/grandcanyon/img/gc-09-1440.jpg" srcset="/wild/grandcanyon/img/gc-09-800.jpg 800w, /wild/grandcanyon/img/gc-09-1440.jpg 1440w" sizes="(min-width: 800px) 80vh, 100vw" width="1440" height="1800" alt="Grand Canyon 2026. Danielle Mariott" loading="lazy" decoding="async"></li>
-    <li class="slide" id="s10"><img src="/wild/grandcanyon/img/gc-10-1440.jpg" srcset="/wild/grandcanyon/img/gc-10-800.jpg 800w, /wild/grandcanyon/img/gc-10-1440.jpg 1440w" sizes="(min-width: 800px) 80vh, 100vw" width="1440" height="1800" alt="Grand Canyon 2026. Danielle Mariott" loading="lazy" decoding="async"></li>
-    <li class="slide" id="s11"><img src="/wild/grandcanyon/img/gc-11-1440.jpg" srcset="/wild/grandcanyon/img/gc-11-800.jpg 800w, /wild/grandcanyon/img/gc-11-1440.jpg 1440w" sizes="(min-width: 800px) 80vh, 100vw" width="1440" height="1800" alt="Grand Canyon 2026. Danielle Mariott" loading="lazy" decoding="async"></li>
-    <li class="slide" id="s12"><img src="/wild/grandcanyon/img/gc-12-1440.jpg" srcset="/wild/grandcanyon/img/gc-12-800.jpg 800w, /wild/grandcanyon/img/gc-12-1440.jpg 1440w" sizes="(min-width: 800px) 80vh, 100vw" width="1440" height="1800" alt="Grand Canyon 2026. Danielle Mariott" loading="lazy" decoding="async"></li>
+    <li class="slide" id="s10"><img src="/wild/grandcanyon/img/gc-10-1440.jpg" srcset="/wild/grandcanyon/img/gc-10-800.jpg 800w, /wild/grandcanyon/img/gc-10-1440.jpg 1440w" sizes="(min-width: 800px) 80vh, 100vw" width="1440" height="1800" alt="Grand Canyon 2026. Danielle Mariott" loading="lazy" decoding="async"><button class="play" type="button" data-video="DgIR813ZSA0" data-ratio="1.7778" style="left:47%;right:0" aria-label="Play video: Lava Falls, Grand Canyon"><span></span></button></li>
+    <li class="slide" id="s11"><img src="/wild/grandcanyon/img/gc-11-1440.jpg" srcset="/wild/grandcanyon/img/gc-11-800.jpg 800w, /wild/grandcanyon/img/gc-11-1440.jpg 1440w" sizes="(min-width: 800px) 80vh, 100vw" width="1440" height="1800" alt="Grand Canyon 2026. Danielle Mariott" loading="lazy" decoding="async"><button class="play main" type="button" data-video="DgIR813ZSA0" data-ratio="1.7778" style="left:0;right:0" aria-label="Play video: Lava Falls, Grand Canyon"><span></span></button></li>
+    <li class="slide" id="s12"><img src="/wild/grandcanyon/img/gc-12-1440.jpg" srcset="/wild/grandcanyon/img/gc-12-800.jpg 800w, /wild/grandcanyon/img/gc-12-1440.jpg 1440w" sizes="(min-width: 800px) 80vh, 100vw" width="1440" height="1800" alt="Grand Canyon 2026. Danielle Mariott" loading="lazy" decoding="async"><button class="play" type="button" data-video="DgIR813ZSA0" data-ratio="1.7778" style="left:0;right:39%" aria-label="Play video: Lava Falls, Grand Canyon"><span></span></button></li>
     <li class="slide" id="s13"><img src="/wild/grandcanyon/img/gc-13-1440.jpg" srcset="/wild/grandcanyon/img/gc-13-800.jpg 800w, /wild/grandcanyon/img/gc-13-1440.jpg 1440w" sizes="(min-width: 800px) 80vh, 100vw" width="1440" height="1800" alt="Grand Canyon 2026. Danielle Mariott" loading="lazy" decoding="async"></li>
     <li class="slide" id="s14"><img src="/wild/grandcanyon/img/gc-14-1440.jpg" srcset="/wild/grandcanyon/img/gc-14-800.jpg 800w, /wild/grandcanyon/img/gc-14-1440.jpg 1440w" sizes="(min-width: 800px) 80vh, 100vw" width="1440" height="1800" alt="Grand Canyon 2026. Danielle Mariott" loading="lazy" decoding="async"></li>
     <li class="slide" id="s15"><img src="/wild/grandcanyon/img/gc-15-1440.jpg" srcset="/wild/grandcanyon/img/gc-15-800.jpg 800w, /wild/grandcanyon/img/gc-15-1440.jpg 1440w" sizes="(min-width: 800px) 80vh, 100vw" width="1440" height="1800" alt="Grand Canyon 2026. Danielle Mariott" loading="lazy" decoding="async"></li>
@@ -66,6 +91,7 @@
     <li class="slide" id="s18"><img src="/wild/grandcanyon/img/gc-18-1440.jpg" srcset="/wild/grandcanyon/img/gc-18-800.jpg 800w, /wild/grandcanyon/img/gc-18-1440.jpg 1440w" sizes="(min-width: 800px) 80vh, 100vw" width="1440" height="1800" alt="Grand Canyon 2026. Danielle Mariott" loading="lazy" decoding="async"></li>
 </ul>
 <nav class="stepper" aria-label="Slides"></nav>
+<dialog id="lb" aria-label="Video player"><button class="x" type="button" aria-label="Close video">&times;</button><div class="frame"></div></dialog>
 <script>
 (function(){
   var strip=document.getElementById('strip'),nav=document.querySelector('.stepper'),
@@ -77,6 +103,7 @@
     var c=li.cloneNode(true),im=c.querySelector('img');
     c.removeAttribute('id');c.setAttribute('aria-hidden','true');
     im.alt='';im.loading='lazy';im.removeAttribute('fetchpriority');
+    var pb=c.querySelector('.play');if(pb)pb.tabIndex=-1;
     before?strip.insertBefore(c,orig[0]):strip.appendChild(c);
   });}
   copy(true);copy(false);
@@ -125,6 +152,19 @@
     var d=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;
     if(d){e.preventDefault();go(abs()+d);}
   });
+  /* Video lightbox */
+  var lb=document.getElementById('lb'),frame=lb.querySelector('.frame');
+  function group(b,on){[].forEach.call(strip.querySelectorAll('.play[data-video="'+b.dataset.video+'"]'),function(p){p.classList.toggle('on',on);});}
+  strip.addEventListener('mouseover',function(e){var b=e.target.closest('.play');if(b)group(b,true);});
+  strip.addEventListener('mouseout',function(e){var b=e.target.closest('.play');if(b)group(b,false);});
+  strip.addEventListener('click',function(e){
+    var b=e.target.closest('.play');if(!b||!lb.showModal)return;
+    frame.style.setProperty('--r',b.dataset.ratio);
+    frame.innerHTML='<iframe src="https://www.youtube.com/embed/'+b.dataset.video+'?autoplay=1&rel=0&playsinline=1" title="'+b.getAttribute('aria-label').replace('Play video: ','')+'" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
+    lb.showModal();
+  });
+  lb.addEventListener('click',function(e){if(e.target===lb||e.target.closest('.x'))lb.close();});
+  lb.addEventListener('close',function(){frame.innerHTML='';});
 })();
 </script>
 </body>
